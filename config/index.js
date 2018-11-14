@@ -7,9 +7,13 @@ const path = require('path')
 module.exports = {
   dev: {
 
+    env: require('./prod.env'),
+    index: path.resolve(__dirname, '../dist/index.html'),
+    assetsRoot: path.resolve(__dirname, '../dist'),
+
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     proxyTable: {},
 
     // Various Dev Server settings
