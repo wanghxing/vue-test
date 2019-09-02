@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # mytest
 
 > A Vue.js project
@@ -24,4 +23,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 # ----mytest
 
-tab
+
+20190902 modified
