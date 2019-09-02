@@ -202,7 +202,7 @@
 .tabBox {border:1px solid #cccccc;}
 .hd ul {display:flex;justify-content:center;}
 .hd li {margin:0 20px;cursor:pointer;}
-.hd li.active {color:#e35885;font-weight:bold;}
+.hd li.active {color:#e35885;}
 
 </style>
 
