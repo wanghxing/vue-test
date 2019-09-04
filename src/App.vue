@@ -18,6 +18,13 @@ export default {
 </script>
 
 <style>
+body {
+  margin:0;
+  padding:0 10px;
+}
+* {
+  word-break: break-word;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,7 +34,10 @@ export default {
   margin-top: 60px;
 }
 
-.nav {text-decoration:none;border:1px solid #666666;padding:10px;margin:20px;}
+.nav {text-decoration:none;border:1px solid #666666;padding:10px;margin:20px 0;}
 .u-link--Active {background:powderblue;color:red;}
+
+.nav {width:25%;}
+a {display:inline-block;}
 
 </style>
