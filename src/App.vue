@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <p>点击下面链接可切换</p>
-    <router-link to="/" class="nav" active-class="u-link--Active">点我跳到HelloWorld</router-link> 
+    <router-link to="/" class="nav" active-class="u-link--Active" exact>点我跳到HelloWorld</router-link> 
     <router-link to="/router2" class="nav" active-class="u-link--Active">点我跳到router2</router-link>
     
     <router-link to="/zhilin" class="nav" active-class="u-link--Active">点我跳到zhilin</router-link>
