@@ -141,10 +141,12 @@
 /*-------------------------
 	The menu
 --------------------------*/
-
+#main {
+    margin-bottom:50px;
+}
 #main nav{
 	display:inline-block;
-	margin:60px auto 45px;
+	margin:30px auto 10px;
 	background-color:#5597b4;
 	box-shadow:0 1px 1px #ccc;
 	border-radius:2px;
@@ -199,10 +201,17 @@
 
 
 /* 3 */
-.tabBox {border:1px solid #cccccc;}
+.tabBox {height: 160px; border:1px solid #cccccc;}
 .hd ul {display:flex;justify-content:center;}
 .hd li {margin:0 20px;cursor:pointer;}
 .hd li.active {color:#e35885;font-weight:bold;}
+
+
+@media (max-width: 767px) {
+    #main nav a {
+        width: 83%;
+    }
+}
 
 </style>
 

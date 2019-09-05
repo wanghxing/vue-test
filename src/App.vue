@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <p>点击下面链接可切换</p>
-    <router-link to="/" class="nav" active-class="u-link--Active">点我跳到HelloWorld</router-link> 
+    <router-link to="/" class="nav" active-class="u-link--Active" exact>点我跳到HelloWorld</router-link> 
     <router-link to="/router2" class="nav" active-class="u-link--Active">点我跳到router2</router-link>
     
     <router-link to="/zhilin" class="nav" active-class="u-link--Active">点我跳到zhilin</router-link>
@@ -32,6 +32,7 @@ body {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 .nav {text-decoration:none;border:1px solid #666666;padding:10px;margin:20px 0;}

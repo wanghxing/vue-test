@@ -13,7 +13,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './', // 之前是 '/'
+    assetsPublicPath: '/', // 之前是 '/'
     proxyTable: {},
 
     // Various Dev Server settings
