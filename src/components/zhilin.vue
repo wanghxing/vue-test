@@ -83,11 +83,11 @@
         </p>
         <div id="example05" :class="center">
             <ul class="pagination">
-                <li v-show="current != 1" @click="current-- && goto(current)" ><a href="javascript:void(0);">上一页</a></li>
+                <li v-show="current != 1" @click="current-- && goto(current)" ><a href="javascript:void(0);">&lt;&lt;</a></li>
                 <li v-for="index in pages" @click="goto(index)" :class="{'active':current == index}" :key="index">
                     <a href="javascript:void(0);" >{{index}}</a>
                 </li>
-                <li v-show="allpage != current && allpage != 0 " @click="current++ && goto(current++)"><a href="javascript:void(0);" >下一页</a></li>
+                <li v-show="allpage != current && allpage != 0 " @click="current++ && goto(current++)"><a href="javascript:void(0);" >&gt;&gt;</a></li>
             </ul>
         </div>
         <p :class="result">摘自：https://www.cnblogs.com/cqsjs/p/5772834.html?utm_source=itdadao&utm_medium=referral </p>
@@ -99,18 +99,19 @@
             6. v-on 用于监听指定元素的DOM事件，比如点击事件。
         </p>
         <div id="example06" :class="center">
-            <input type="text" v-model="imsg">
-            <button v-on:click="greet">Greet</button>
-            <!-- v-on指令可以缩写为@符号-->
-            <!-- <button @click="greet">Greet Again</button> -->
+            <div class="six_con">
+                <input type="text" v-model="imsg">
+                <button v-on:click="greet">Greet</button>
+                <!-- v-on指令可以缩写为@符号-->
+                <!-- <button @click="greet">Greet Again</button> -->
+            </div>
 
-            <div style="margin:0 20px;"></div>
-
-            <input type="text" v-model="imsg2">
-            <button v-on:click="showTitle(imsg2,$event,'hello')">Btn</button>
-            <button @click="showTitle2">btn2</button>
-            <span class="text">{{ititle2}}</span>
-
+            <div class="six_con">
+                <input type="text" v-model="imsg2">
+                <button v-on:click="showTitle(imsg2,$event,'hello')">Btn</button>
+                <button @click="showTitle2">btn2</button>
+                <span class="text">{{ititle2}}</span>
+            </div>
         </div>
         <p :class="result">语法：V-on:click=“事件回调函数的名称”， 定义事件的回调函数，在vue的实例化对象的methods属性中定义</p>
         <p :class="result">注意:HTML5中不能使用v-on，换为@</p>
@@ -160,12 +161,10 @@
                 tit:'tit',
                 result:'result',
                 center:'center',
-
                 male:true,
                 female:false,
                 age:29,
                 name:'colin',
-
                 age3:21,
                 name3:'keepcool',
                 sex3:'Male',
@@ -186,18 +185,13 @@
                     age:36,
                     sex:'Male'
                 }],
-
                 current:1,
                 showItem:5,
                 allpage:13,
-
                 imsg:"Nice meeting U",
-
                 imsg2:"Nice meeting U too",
                 ititle2:''
-
             }
-
         },
         computed:{
             pages:function(){
@@ -251,22 +245,17 @@
 
 <style lang="scss">
 $f12: 12px;
-
 $bgCol:red;
-
 $col_white:#ffffff;
 $blue:#177bbb;
 $red:red;
-
 @mixin border-radius{
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-
 @mixin borderBottom($w,$s,$c){
   border-bottom:$w $s $c;
 }
-
 // https://www.jianshu.com/p/680aea02eba4 (sass)
 @mixin prefixer($name,$shadow) {
   @if($name=='border-radius'){
@@ -283,42 +272,36 @@ $red:red;
     @include prefixer(box-shadow, $shadow);
   }
 }
-
 @mixin size($width,$height){
   width: $width;
   height: $height;
 }
-
 @mixin lh($lh){
   line-height:$lh;
 }
-
 @mixin fontSize($f){
   font-size:$f;
 }
 /* 底部签名*/
 @keyframes ants { to { background-position: 100% 100% } }
-
 #Cqlsignature {
-	padding: 1em;
-	border: 1px solid transparent;
-	background: linear-gradient(white, white) padding-box,
-	            repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .6em .6em;
-	animation: ants 15s linear infinite;
-	max-width:20rem;
-	
-	font: 100%/1.6 Baskerville, Palatino, serif;
+    padding: 1em;
+    border: 1px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .6em .6em;
+    animation: ants 15s linear infinite;
+    max-width:20rem;
+    
+    font: 100%/1.6 Baskerville, Palatino, serif;
 }
 .Cqlsignature-name{
    text-align:right;
    padding-right:2rem
 }
-
 .zhilinPage {
     font-size:$f12;
     padding-top:30px;
 }
-
 .box2 {
     @include border-radius;
     @include size(200px,50px);
@@ -342,13 +325,12 @@ $red:red;
 .zhilinPage .result {
     color:$blue;
 }
-
 .zhilinPage .center {
     display: flex;
     justify-content:center;
     width:100%;
+    flex-direction: column;
 }
-
 // 分页
 body{
 font-family:"Segoe UI";
@@ -361,18 +343,17 @@ text-decoration:none;
 }
 .pagination {
 position: relative;
-
+padding:0;
 }
 .pagination li{
 display: inline-block;
 margin:0 5px;
 }
 .pagination li a{
-padding:.5rem 1rem;
+padding:5px 10px;
 display:inline-block;
 border:1px solid #ddd;
 background:#fff;
-
 color:#0E90D2;
 }
 .pagination li a:hover{
@@ -382,8 +363,19 @@ background:#eee;
 background:#0E90D2;
 color:#fff;
 }
-
 .zhilinPage .text {padding:5px 10px;color:$red;}
-
+.six_con {
+    width:100%;
+    text-align: left;
+    margin-bottom: 20px;
+    * {
+        display: inline-block;
+    }
+    input {
+        width:60%;
+    }
+    span.text {
+        display: block;
+    }
+}
 </style>
-

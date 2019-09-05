@@ -32,6 +32,7 @@ body {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 .nav {text-decoration:none;border:1px solid #666666;padding:10px;margin:20px 0;}

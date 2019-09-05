@@ -41,7 +41,6 @@
 <script>
     import child2 from './son2.vue'
     import Vue from 'vue' 
-
     // tab0
     Vue.component('item0',{
     template : '<div>1111111content</div>'
@@ -63,17 +62,14 @@
         <p>{{message}}</p>
         </div>`
     })
-
     export default {
         name: 'router2',
         data () {
             return {
             tit: '我是组件里的router2页面',
             msg2: '双向绑定',
-
             myMsg2:'my name is son2',
             active:'home',
-
             selected: 0,
             currentView : 'item0',
             list: [
@@ -87,8 +83,6 @@
                 title: 'tabnav3'
             }
             ]
-
-
             }
         },
         components:{
@@ -104,9 +98,6 @@
             }
         }
     }
-
-
-
 </script>
 
 <style lang="scss">
@@ -131,78 +122,71 @@
     -moz-transform: translateY(-5px);
     -o-transform: translateY(-5px);
 }
-
 .tabNav {display:flex;justify-content:space-around;width:300px;margin:20px auto;}
 .tabNav li {cursor:pointer;}
 .tabNav li.active {color:#ff6600;}
 /* .tabCon {display:none;} */
-
-
 /*-------------------------
-	The menu
+    The menu
 --------------------------*/
-
+#main {
+    margin-bottom:50px;
+}
 #main nav{
-	display:inline-block;
-	margin:60px auto 45px;
-	background-color:#5597b4;
-	box-shadow:0 1px 1px #ccc;
-	border-radius:2px;
+    display:inline-block;
+    margin:30px auto 10px;
+    background-color:#5597b4;
+    box-shadow:0 1px 1px #ccc;
+    border-radius:2px;
 }
-
 #main nav a{
-	display:inline-block;
-	padding: 18px 30px;
-	color:#fff !important;
-	font-weight:bold;
-	font-size:16px;
-	text-decoration:none !important;
-	line-height:1;
-	text-transform: uppercase;
-	background-color:transparent;
-
-	-webkit-transition:background-color 0.25s;
-	-moz-transition:background-color 0.25s;
-	transition:background-color 0.25s;
+    display:inline-block;
+    padding: 18px 30px;
+    color:#fff !important;
+    font-weight:bold;
+    font-size:16px;
+    text-decoration:none !important;
+    line-height:1;
+    text-transform: uppercase;
+    background-color:transparent;
+    -webkit-transition:background-color 0.25s;
+    -moz-transition:background-color 0.25s;
+    transition:background-color 0.25s;
 }
-
 #main nav a:first-child{
-	border-radius:2px 0 0 2px;
+    border-radius:2px 0 0 2px;
 }
-
 #main nav a:last-child{
-	border-radius:0 2px 2px 0;
+    border-radius:0 2px 2px 0;
 }
-
 #main nav.home .home,
 #main nav.projects .projects,
 #main nav.services .services,
 #main nav.contact .contact{
-	background-color:#e35885;
+    background-color:#e35885;
 }
-
 #main p{
-	font-size:22px;
-	font-weight:bold;
-	color:#7d9098;
+    font-size:22px;
+    font-weight:bold;
+    color:#7d9098;
 }
-
 #main p b{
-	color:#ffffff;
-	display:inline-block;
-	padding:5px 10px;
-	background-color:#c4d7e0;
-	border-radius:2px;
-	text-transform:uppercase;
-	font-size:18px;
+    color:#ffffff;
+    display:inline-block;
+    padding:5px 10px;
+    background-color:#c4d7e0;
+    border-radius:2px;
+    text-transform:uppercase;
+    font-size:18px;
 }
-
-
 /* 3 */
-.tabBox {border:1px solid #cccccc;}
+.tabBox {height: 160px; border:1px solid #cccccc;}
 .hd ul {display:flex;justify-content:center;}
 .hd li {margin:0 20px;cursor:pointer;}
-.hd li.active {color:#e35885;}
-
+.hd li.active {color:#e35885;font-weight:bold;}
+@media (max-width: 767px) {
+    #main nav a {
+        width: 83%;
+    }
+}
 </style>
-
